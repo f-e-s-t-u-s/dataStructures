@@ -5,11 +5,39 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
-    <title>Data Structures and Algorithms</title>
+    <title>Search and Sort Algorithms</title>
   </head>
   <body>
+    <div class="contenet">
+        <h1>Linear Search (Sequential)</h1>
+       <div class="paragraghs">
+        <p>list of elements is searched for one by one, from the first to the last</p>
+        <p>The position of the element being searched for determines how fast the element is found</p>
+        <p>if the search is not successful, n comparisons are required. n is the number of elements in list</p>
+        <p>The time complexity is (O)n </p>
+       </div>
+       <h3>Algorithm for Linear Search</h3>
+       <pre>
+       
+       <code>
+        linearSearch(list, x) { 
+            index = 0;
+            found = true;
+            for (index = 1; index < list.length; index++) {
+                if (x == list[index]) {
+                    return index;
+                }
+            }
+            if (!found) {
+                return "not found";
+            }
+        }
+    </code>
+</pre>
+    
+    </div>
     <div class="button">
-      <button onclick="displayOutput()">Run JS!</button>
+      <button id="run" onclick="displayOutput()">Run Linear Search!</button>
       <button id="search" >Search</button>
     </div>
     <div class="output">
